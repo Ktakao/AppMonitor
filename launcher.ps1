@@ -10,5 +10,3 @@ $BatPath = Join-Path -Path $PSScriptRoot -ChildPath $BatFileName
 # Execute the batch file in a hidden window
 Start-Process -FilePath $BatPath -WindowStyle Hidden
 
-# Execute the batch file in a hidden window
-Start-Process -FilePath $BatPath -WindowStyle Hidden
