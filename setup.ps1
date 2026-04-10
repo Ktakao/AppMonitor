@@ -55,7 +55,7 @@ $PsDest = Join-Path $TargetDir "launcher.ps1"
 Write-Host "Generated: $PsDest" -ForegroundColor Green
 
 # 5. Create Startup Shortcut
-$StartupDir = [Environment]::GetFolderPath("Startup")
+$StartupDir = [Environment]::GetFolderPath("CommonStartup")
 $ShortcutPath = Join-Path -Path $StartupDir -ChildPath "AppMonitor_Launcher.lnk"
 
 $WshShell = New-Object -ComObject WScript.Shell
