@@ -13,10 +13,10 @@ SET "APP_PATH=__APP_PATH__"
 call :Logger "Start Monitoring: %APP_NAME%"
 
 :loop
-tasklist | find /i "%APP_NAME%" > nul
+tasklist /FI "IMAGENAME eq %APP_NAME%" 2>nul | find /i "%APP_NAME%" > nul
 
 :: If not running (ErrorLevel is not 0), restart the app
-if %errorlevel% neq 0 (
+if errorlevel 1 (
     call :Logger "WARNING: %APP_NAME% is not running. Restarting..."
     start "" "%APP_PATH%"
 
