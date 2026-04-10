@@ -24,7 +24,7 @@ $TargetDir = "C:\AppMonitor"
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "Error: Please run this script with Administrator privileges." -ForegroundColor Red
-    exit
+    exit 1
 }
 
 # 2. Create Target Directory
