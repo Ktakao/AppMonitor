@@ -14,3 +14,9 @@ Windowsアプリケーション用の軽量な自動監視・復旧ツールで�
 実行例:
 ```powershell
 .\setup.ps1 -AppName "notepad.exe" -AppPath "C:\Windows\System32\notepad.exe"
+```
+
+Powershellでスクリプト実行を禁止している場合には制限を一時的に解除する。
+```powershell
+powershell -ExecutionPolicy Bypass -File .\setup.ps1 -AppName "notepad.exe" -AppPath "C:\Windows\System32\notepad.exe"
+```
